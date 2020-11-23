@@ -1,26 +1,26 @@
 <html lang="en">
     <head>
-        <link href="C:\Users\henbi\Desktop\web\.vscode\CSS\form.css" rel ="stylesheet" type = "text/css">
+        <link href="form.css" rel ="stylesheet" type = "text/css">
         <body>
             <div class="text-center">
-            <h2>freeCodeCamp Survey Form</h2>
-            <h5>Thank you for taking the time to help us improve the platform</h5>
+            <h1>freeCodeCamp Survey Form</h1>
+            <h4>Thank you for taking the time to help us improve the platform</h4>
             </div>
             <form id = "survey" background-color="blue">
                 <div class = "group">
-                    <label id = "name-title">Name</label> </br>
-                    <input type ="text" name="name" id="name" placeholder="Enter your name"> </br> 
-                </div></br>
+                    <label id = "name-title">Name</label> 
+                    <input class="form-control" type ="text" name="name" id="name" placeholder="Enter your name">  
+                </div>
                 <div class = "group">
-                    <label id = "email-title">Email</label> </br>
-                    <input type ="text" name="mail" id="mail" placeholder="Enter your Email"> </br>
-                </div></br>
+                    <label id = "email-title">Email</label> 
+                    <input class="form-control" type ="text" name="mail" id="mail" placeholder="Enter your Email"> 
+                </div>
                 <div class = "group">
-                    <label id = "age-title">Age(optional)</label> </br>
-                    <input type ="text" name="age" id="age" placeholder="Age"> </br>
-                </div></br>
+                    <label id = "age-title">Age(optional)</label> 
+                    <input class="form-control" type ="text" name="age" id="age" placeholder="Age"> 
+                </div>
                 <div class = "group">
-                    <label id = "description-title">Which option best describes your current role?</label> </br>
+                    <label id = "description-title">Which option best describes your current role?</label> 
                     <select name ="desctiption" id = "description">
                         <option value="" disabled selected>Select your current role</option>
                         <option value="student">student</option>
@@ -28,17 +28,42 @@
                         <option value="Full Time Learner">Full time Learner</option>
                         <option value="prefer not to say">prefer not to say</option>
                         <option value="Other">Other</option>
-                    </select> </br>
-                </div></br>
+                    </select> 
+                </div>
                 <div class = "group">
-                    <label id = "recommend-title">Would you recommend freeCodeCamp to a friend?</label> </br>
-                    <input type ="radio" id="Definitely" name = "rec" checked/>Definitely  </br>
-                    <input type ="radio" id="Maybe" name = "rec"/> Maybe </br>
-                    <input type ="radio" id="Not Sure" name = "rec"/> Not Sure </br>
-                </div></br>
+                    <label id = "recommend-title">Would you recommend freeCodeCamp to a friend?</label> 
+                    <label><input  type="radio" class="radio-class" id="Definitely" name = "rec" checked/>Definitely </label>
+                    <label><input  type="radio" class="radio-class" id="Maybe" name = "rec"/> Maybe </label>
+                    <label><input  type="radio" class="radio-class" id="Not Sure" name = "rec"/> Not Sure </label>
+                </div>
+                <div class="group">
+                    <label id= "improve-title">What would you like to see improved? (Check all that apply)</label> 
+                    <label><input  type="checkbox" class="checkbox-class" id ="front" name = "front" value="front"> 
+                    Front-end Projects</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="back" name = "back" value="back"> 
+                    Back-end Projects</label>
+                    <label><input type="checkbox" id ="data" name = "data" value="data"> 
+                    Data Visualization</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="challenges" name = "challenges" value="challenges"> 
+                    challenges</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="open-source" name = "open-source" value="open-source"> 
+                    Open Source Community</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="gitter" name = "gitter" value="gitter"> 
+                    Gitter help rooms</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="Videos" name = "Videos" value="Videos"> 
+                    Videos</label>
+                    <label><input type="checkbox" id ="city-meetups" name = "city-meetups" value="city-meetups"> 
+                    Front-end City Meetups</label>
+                    <label><input  type="checkbox" class="checkbox-class" id ="wiki" name = "wiki" value="wiki"> 
+                    Wiki</label>
+                    <label><input type="checkbox" id ="forum" name = "forum" value="forum"> 
+                    Forum</label>
+                    <label><input type="checkbox" id ="courses" name = "courses" value="courses"> 
+                    Additional Courses</label>
 
-                
-                
+                </div>
+
+
             </form>
         </body>
     </head>
