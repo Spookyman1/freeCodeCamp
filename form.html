@@ -21,7 +21,7 @@
                 </div>
                 <div class = "group">
                     <label id = "description-title">Which option best describes your current role?</label> 
-                    <select name ="desctiption" id = "description">
+                    <select name ="desctiption" id = "description" class = "form-control">
                         <option value="" disabled selected>Select your current role</option>
                         <option value="student">student</option>
                         <option value="Full Time Job">Full Time Job</option>
@@ -35,6 +35,16 @@
                     <label><input  type="radio" class="radio-class" id="Definitely" name = "rec" checked/>Definitely </label>
                     <label><input  type="radio" class="radio-class" id="Maybe" name = "rec"/> Maybe </label>
                     <label><input  type="radio" class="radio-class" id="Not Sure" name = "rec"/> Not Sure </label>
+                </div>
+                <div class = "group">
+                    <label id = "favorite-title">What is your favorite feature of freeCodeCamp?</label> 
+                    <select name ="favorite" id = "favorite" class = "form-control">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="open-source">Open source</option>
+                    </select> 
                 </div>
                 <div class="group">
                     <label id= "improve-title">What would you like to see improved? (Check all that apply)</label> 
@@ -62,8 +72,14 @@
                     Additional Courses</label>
 
                 </div>
+                <div class = "group">
+                    <label> comments or suggestions?</label>
+                    <textarea class="area-control" rows="6" cols="62" id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
 
-
+                </div>
+                <div class="group">
+                    <button id="submit" name="submit">Submit</button>
+                </div>
             </form>
         </body>
     </head>
