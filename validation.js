@@ -35,9 +35,12 @@ function nameVerify() { //verify name has hebrew or english letters only
 }
 function mailVerify() {
     var regex = /\S+@\S+\.\S+/;
-    var mail = document.getElementById('mail').value;
+    var mail = String(document.getElementById('mail').value);
     var mailError = document.getElementById('mail-error');
-    if(regex.test(String(mail))) {
+    if(mail == "") {
+        mailError.innerHTML = "";
+        mailError.style.display = "none";
+    } else if(regex.test(mail)) {
         mailError.innerHTML = "";
         mailError.style.display = "none";
     } else {
