@@ -7,8 +7,8 @@ function ageVerify() {
             parentField.style.display = 'none';
     } else {
         if(Number(age) < 18) {
-            parentLabel.style.display = 'block';
-            parentField.style.display = 'block';
+            parentLabel.style.display = 'flex';
+            parentField.style.display = 'flex';
         }
     }
 }
@@ -28,9 +28,20 @@ function nameVerify() { //verify name has hebrew or english letters only
             nameError.style.display = 'none';
             nameError.innerHTML  = '';
         } else {
-            nameError.style.display = 'block';
+            nameError.style.display = 'flex';
             nameError.innerHTML = 'name must contain only letters and spaces';
         }
     }
 }
-
+function mailVerify() {
+    var regex = /\S+@\S+\.\S+/;
+    var mail = document.getElementById('mail').value;
+    var mailError = document.getElementById('mail-error');
+    if(regex.test(String(mail))) {
+        mailError.innerHTML = "";
+        mailError.style.display = "none";
+    } else {
+        mailError.innerHTML = "not a valid mail address";
+        mailError.style.display = "flex";
+    }
+}

@@ -16,7 +16,8 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'email-title'>Email</span> 
-                    <input class='form-control' type ='text' name='mail' id='mail' placeholder='Enter your Email'> 
+                    <input class='form-control' type ='text' name='mail' id='mail' placeholder='Enter your Email' onchange="mailVerify()">
+                    <span class = 'error-msg' type = 'text' name = 'mail-error' id='mail-error'></span> 
                 </div>
                 <div class = 'group'>
                     <span id = 'age-title'>Age(optional)</span> 

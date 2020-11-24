@@ -14,7 +14,8 @@ body {
     font-size:1rem;
     position: relative;
     background:var(darkblue);
-    background-image:linear-gradient(115deg,rgba(58,58,158,0.8),rgba(136,136,206,0.7)) ,url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-image:linear-gradient(115deg,rgba(58,58,158,0.8),rgba(136,136,206,0.7)) 
+    ,url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     display: block;
     color: white;
     max-width: 50vw;
@@ -72,6 +73,7 @@ span {
 }
 textarea{
     resize: vertical;
+    width: 100%;
 }
 #parents-title{
     display: none;
