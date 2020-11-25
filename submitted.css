@@ -1,6 +1,7 @@
 :root {
-    --color-darkblue-alpha: rgba(28,9,6);
+    --color-darkblue-alpha: rgb(28,9,6);
     --color-white: #f3f3f3;
+    --color-graybutton: rgb(69,72,87);
 }
 html {
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
@@ -23,10 +24,21 @@ body {
     
 }
 .control{
-    display: block;
-    width: 99%;
-    height: 8.375vh;
-    padding: 0.375rem 0.8rem;
-    text-align: center  ;
+        display: block;
+        height: 8.375vh;    
+        text-align: center;
+        position: relative;
+        margin: 0 auto 20.25vh auto;
     
+}
+#back {
+    background-color: var(--color-graybutton);
+    text-align: center;
+    font-family: inherit; 
+    box-shadow: none;
+    border-radius: 0.5vh;
+    border: none;
+    color :white;
+    width: 9.5vw;
+    height: 6.5vh;
 }
