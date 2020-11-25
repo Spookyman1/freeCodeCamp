@@ -9,6 +9,12 @@
             "request": "launch",
             "name": "Open form.html",
             "file": "c:\\Users\\henbi\\Desktop\\web\\form.html"
+        },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Open submitted.html",
+            "file": "c:\\Users\\henbi\\Desktop\\web\\submitted.html"
         }
     ]
 }
