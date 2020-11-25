@@ -7,7 +7,6 @@ html {
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
     line-height: 1.5;
     font-size: 15px;
-    font-weight: 400;
 }
 body {
     align-content: center;
@@ -18,13 +17,11 @@ body {
     color: white;
     max-width: 50vw;
     margin:auto;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-top: 5em;
+    margin-top: 14vw;
     
 }
 .control{
-        display: block;
+        display: block; 
         height: 8.375vh;    
         text-align: center;
         position: relative;

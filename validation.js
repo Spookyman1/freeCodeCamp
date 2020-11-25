@@ -60,13 +60,14 @@ function mailVerify() {
     }
 }
 function formVerify() {
-    console.log("valid");
     var submitButton = document.getElementById('submit');
     if(ageValid && nameValid && mailValid) {
         submitButton.style.backgroundColor ="#37af65";
         submitButton.style.color = "white";
+        submitButton.disabled = false;
     } else {
         submitButton.style.backgroundColor ="gray";
         submitButton.style.color = "black";
+        submitButton.disabled = true;
     }
 }

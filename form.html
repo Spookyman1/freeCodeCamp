@@ -1,6 +1,7 @@
 <html lang='en'>
     <head>
         <script src = 'validation.js'></script>
+        <script src = 'redirections.js'></script>
     </head>
         <link href='form.css' rel ='stylesheet' type = 'text/css'>
         <body>
@@ -16,7 +17,8 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'email-title'>Email</span> 
-                    <input class='form-control' type ='text' name='mail' id='mail' placeholder='Enter your Email' onchange="mailVerify()">
+                    <input class='form-control' type ='text' name='mail' id='mail' 
+                    placeholder='Enter your Email' onchange="mailVerify()">
                     <span class = 'error-msg' type = 'text' name = 'mail-error' id='mail-error'></span> 
                 </div>
                 <div class = 'group'>
@@ -29,7 +31,7 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'description-title'>Which option best describes your current role?</span> 
-                    <select name ='desctiption' id = 'description' class = 'form-control'>
+                    <select name ='desctiption' id = 'description' class = 'form-control cursor-click'>
                         <option value='' disabled selected>Select your current role</option>
                         <option value='student'>student</option>
                         <option value='Full Time Job'>Full Time Job</option>
@@ -40,14 +42,14 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'recommend-title'>Would you recommend freeCodeCamp to a friend?</span> 
-                    <span><input  type='radio' 
-                        class='radio-class' id='Definitely' name = 'rec' checked/>Definitely </span>
-                    <span><input  type='radio' class='radio-class' id='Maybe' name = 'rec'/> Maybe </span>
-                    <span><input  type='radio' class='radio-class' id='Not Sure' name = 'rec'/> Not Sure </span>
+                    <label class = 'cursor-click'><input  type='radio' 
+                        class='radio-class' id='Definitely' name = 'rec' checked/>Definitely </label>
+                    <label class = 'cursor-click'><input  type='radio' class='radio-class' id='Maybe' name = 'rec'/> Maybe </label>
+                    <label class = 'cursor-click'><input  type='radio' class='radio-class' id='Not Sure' name = 'rec'/> Not Sure </label>
                 </div>
                 <div class = 'group'>
                     <span id = 'favorite-title'>What is your favorite feature of freeCodeCamp?</span> 
-                    <select name ='favorite' id = 'favorite' class = 'form-control'>
+                    <select name ='favorite' id = 'favorite' class = 'form-control cursor-click'>
                         <option value='' disabled selected>Select an option</option>
                         <option value='challenges'>Challenges</option>
                         <option value='projects'>Projects</option>
@@ -57,31 +59,30 @@
                 </div>
                 <div class='group'>
                     <span id= 'improve-title'>What would you like to see improved? (Check all that apply)</span> 
-                    <span><input  type='checkbox' class='checkbox-class' id ='front' name = 'front' value='front'> 
-                    Front-end Projects</span>
-                    <span><input  type='checkbox' class='checkbox-class' id ='back' name = 'back' value='back'> 
-                    Back-end Projects</span>
-                    <span><input type='checkbox' id ='data' name = 'data' value='data'> 
-                    Data Visualization</span>
-                    <span><input  type='checkbox' class='checkbox-class' 
+                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='front' name = 'front' value='front'> 
+                    Front-end Projects</label>
+                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='back' name = 'back' value='back'> 
+                    Back-end Projects</label>
+                    <label class = "cursor-click"><input type='checkbox' id ='data' name = 'data' value='data'> 
+                    Data Visualization</label>
+                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' 
                         id ='challenges' name = 'challenges' value='challenges'> 
-                    challenges</span>
-                    <span><input  type='checkbox' class='checkbox-class' 
+                    challenges</label>
+                    <label ><input  type='checkbox' class='checkbox-class' 
                         id ='open-source' name = 'open-source' value='open-source'> 
-                    Open Source Community</span>
-                    <span><input  type='checkbox' class='checkbox-class' id ='gitter' name = 'gitter' value='gitter'> 
-                    Gitter help rooms</span>
-                    <span><input  type='checkbox' class='checkbox-class' id ='Videos' name = 'Videos' value='Videos'> 
-                    Videos</span>
-                    <span><input type='checkbox' id ='city-meetups' name = 'city-meetups' value='city-meetups'> 
-                    Front-end City Meetups</span>
-                    <span><input  type='checkbox' class='checkbox-class' id ='wiki' name = 'wiki' value='wiki'> 
-                    Wiki</span>
-                    <span><input type='checkbox' id ='forum' name = 'forum' value='forum'> 
-                    Forum</span>
-                    <span><input type='checkbox' id ='courses' name = 'courses' value='courses'> 
-                    Additional Courses</span>
-
+                    Open Source Community</label>
+                    <label><input  type='checkbox' class='checkbox-class' id ='gitter' name = 'gitter' value='gitter'> 
+                    Gitter help rooms</label>
+                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='Videos' name = 'Videos' value='Videos'> 
+                    Videos</label>
+                    <label class = "cursor-click"><input type='checkbox' id ='city-meetups' name = 'city-meetups' value='city-meetups'> 
+                    Front-end City Meetups</label>
+                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='wiki' name = 'wiki' value='wiki'> 
+                    Wiki</label>
+                    <label class = "cursor-click"><input type='checkbox' id ='forum' name = 'forum' value='forum'> 
+                    Forum</label>
+                    <label class = "cursor-click"><input type='checkbox' id ='courses' name = 'courses' value='courses'> 
+                    Additional Courses</label>
                 </div>
                 <div class = 'group'>
                     <span> comments or suggestions?</span>
@@ -90,7 +91,7 @@
 
                 </div>
                 <div class='group'>
-                    <button id='submit' name='submit' onclick="redirect()">Submit</button>
+                    <button id='submit' name='submit' onclick="success()" disabled=true>Submit</button>
                 </div>
             </form>
         </body>
