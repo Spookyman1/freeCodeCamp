@@ -1,9 +1,9 @@
 function backToForm() {
-    console.log("lol")
-    window.location.replace("~/form.html");
+    console.log('lol')
+    window.location.replace('./form.html');
 }
 function success() {
-    console.log("redi")
-    //window.location.replace = "submitted.html";
-    return false;
+    console.log('redi')
+    event.preventDefault();
+    window.location.href = './submitted.html';
 }

@@ -1,6 +1,7 @@
 <html lang='en'>
     <head>
         <script src = 'validation.js'></script>
+        <script src= 'redirections.js'></script>
     </head>
         <link href='form.css' rel ='stylesheet' type = 'text/css'>
         <body>
@@ -8,7 +9,7 @@
             <h1>freeCodeCamp Survey Form</h1>
             <h4>Thank you for taking the time to help us improve the platform</h4>
             </div>
-            <form id = 'survey' background-color='blue' onchange="formVerify()">
+            <form id = 'survey' background-color='blue' onsubmit ="success()" onchange="formVerify()">
                 <div class = 'group'>
                     <span id = 'name-title'>Name</span> 
                     <input class='form-control' type ='text' name='name' id='name' placeholder='Enter your name' onchange="nameVerify()"> 
@@ -90,8 +91,8 @@
 
                 </div>
                 <div class='group'>
-                    <button id='submit' name='submit' onclick="success()" disabled=true>Submit</button>
+                    <input type="submit" id='submit' name='submit' disabled=true value="Submit"></button>
                 </div>
             </form>
-        </body>
+        </body>ען
 </html>
