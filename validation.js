@@ -9,20 +9,20 @@ function ageVerify() {
     var parentField = document.getElementById('parents');
     if(Number(age) < 0) {
         parentLabel.style.display = 'flex';
-        parentField.value = 'age must be positive';
+        parentLabel.innerHTML = 'age must be positive';
         parentLabel.style.color = 'red';
     }
-   else if(age==""){
+   else if(age==''){
             ageValid = false;
             parentLabel.style.display = 'none';
             parentField.style.display = 'none';
-            parentLabel.value ='Participants younger than 18 must provide one parent name';
-            parentLabel.style.color = 'white';
     } else {
         ageValid = true;
         if(Number(age) < 18) {
             parentLabel.style.display = 'flex';
             parentField.style.display = 'flex';
+            parentLabel.innerHTML ='Participants younger than 18 must provide one parent name';
+            parentLabel.style.color = 'white';
         }
     }
 }
