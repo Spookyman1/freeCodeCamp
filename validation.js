@@ -7,10 +7,17 @@ function ageVerify() {
     var age = document.getElementById('age').value;
     var parentLabel = document.getElementById('parents-title');
     var parentField = document.getElementById('parents');
-    if(age==""){
+    if(Number(age) < 0) {
+        parentLabel.style.display = 'flex';
+        parentField.value = 'age must be positive';
+        parentLabel.style.color = 'red';
+    }
+   else if(age==""){
             ageValid = false;
             parentLabel.style.display = 'none';
             parentField.style.display = 'none';
+            parentLabel.value ='Participants younger than 18 must provide one parent name';
+            parentLabel.style.color = 'white';
     } else {
         ageValid = true;
         if(Number(age) < 18) {
