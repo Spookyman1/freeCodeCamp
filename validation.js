@@ -1,19 +1,24 @@
-//TODO: ARROW FUNCTIONS
-//make const
-//instead of dealing with style,create classes and switch between them when valid\inval
+//TODO: ARROW FUNCTIONS DONE!
+//make const DONE!
+//instead of dealing with style,create classes and switch between them when valid\inval DISAGREE
 let ageValid = false;
 let nameValid = false;
 let mailValid = false;
 let descriptionValue = false;
 let favoriteValue = false;
+
 const VALID_DISPLAY = "none";
 const INVALID_DISPLAY = "flex";
+
+const MAIL_PATTERN = /\S+@\S+\.\S+/;
+const NAME_PATTERN = /^[a-zA-Zא-ת\s]*$/;
+
 const ageVerify = () => {
   var age = Number(document.getElementById("age").value);
   var parentLabel = document.getElementById("parents-title");
   var parentField = document.getElementById("parents");
   var positiveError = document.getElementById("positive-age");
-  if (!age) {
+  if (isNaN(age)) {
     ageValid = false;
     parentLabel.style.display = VALID_DISPLAY;
     parentField.style.display = VALID_DISPLAY;
@@ -27,9 +32,6 @@ const ageVerify = () => {
       parentLabel.style.display = INVALID_DISPLAY;
       parentField.style.display = INVALID_DISPLAY;
       positiveError.style.display = VALID_DISPLAY;
-      parentLabel.innerHTML =
-        "Participants younger than 18 must provide one parent name";
-      parentLabel.style.color = "white";
     } else {
       parentLabel.style.display = VALID_DISPLAY;
       parentField.style.display = VALID_DISPLAY;
@@ -42,45 +44,31 @@ const nameVerify = () => {
   //verify name has hebrew or english letters only
   var nameField = document.getElementById("name").value;
   var nameError = document.getElementById("name-error");
-  var name = String(nameField);
-  if (name == "") {
+  var name = nameField;
+  if (!name) {
     nameValid = false;
     nameError.style.display = VALID_DISPLAY;
-    nameError.innerHTML = "";
   }
-  for (var i = 0; i < name.length; i++) {
-    if (
-      (name.charAt(i) >= "א" && name.charAt(i) <= "ת") ||
-      (name.charAt(i) >= "a" && name.charAt(i) <= "z") ||
-      (name.charAt(i) >= "A" && name.charAt(i) <= "Z") ||
-      name.charAt(i) == " "
-    ) {
-      nameValid = true;
-      nameError.style.display = VALID_DISPLAY;
-      nameError.innerHTML = "";
-    } else {
-      nameValid = false;
-      nameError.style.display = INVALID_DISPLAY;
-      nameError.innerHTML = "name must contain only letters and spaces";
-    }
+  if (NAME_PATTERN.test(nameField)) {
+    nameValid = true;
+    nameError.style.display = VALID_DISPLAY;
+  } else {
+    nameValid = false;
+    nameError.style.display = INVALID_DISPLAY;
   }
 };
 //const outside of function
 const mailVerify = () => {
-  var regex = /\S+@\S+\.\S+/;
   var mail = String(document.getElementById("mail").value);
   var mailError = document.getElementById("mail-error");
   if (mail == "") {
     mailValid = false;
-    mailError.innerHTML = "";
     mailError.style.display = VALID_DISPLAY;
-  } else if (!regex.test(mail)) {
+  } else if (!MAIL_PATTERN.test(mail)) {
     mailValid = false;
-    mailError.innerHTML = "not a valid mail address";
     mailError.style.display = INVALID_DISPLAY;
   } else {
     mailValid = true;
-    mailError.innerHTML = "";
     mailError.style.display = VALID_DISPLAY;
   }
 };

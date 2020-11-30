@@ -74,11 +74,8 @@ textarea {
   resize: vertical;
   width: 100%;
 }
-/* unify with parents and make a different label for negative age */
-#parents-title {
-  display: none;
-}
-#parents {
+
+.parents-field {
   display: none;
 }
 .error-msg {
