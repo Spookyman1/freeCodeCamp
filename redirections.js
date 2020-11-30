@@ -1,6 +1,6 @@
 function backToForm() {
     console.log('lol')
-    window.location.replace('./form.html');
+    window.location.href= './form.html';
 }
 function success() {
     console.log('redi')

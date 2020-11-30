@@ -2,13 +2,14 @@
     <head>
     </head>
     <link href='submitted.css' rel ='stylesheet' type = 'text/css'>
+    <script src="redirections.js"></script>
     <body>
         <div class="control">
         <h2>The form submitted successfuly</h2>
         <h3>You can go back to the form if you want to fill it again</h3>
         </div>
         <div class="control">    
-        <input type = button value = "back to form" id = "back" name="back"/>
+        <input type = "submit" value = "back to form" onclick="backToForm()" id = "back" name="back"/>
         </div>
     </body>
 </html>
