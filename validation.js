@@ -1,6 +1,8 @@
 var ageValid = false;
 var nameValid = false;
 var mailValid = false;
+var descriptionValue = false;
+var  favoriteValue  = false;
 function ageVerify() {
     var age = document.getElementById('age').value;
     var parentLabel = document.getElementById('parents-title');
@@ -59,9 +61,22 @@ function mailVerify() {
         mailError.style.display = "none";
     }
 }
+function descriptionVerify() {
+    var select = document.getElementById("description").value;
+    if(String(select) != '') {
+        descriptionValue = true;
+    }
+}
+
+function featureVerify() {
+    var select = document.getElementById("favorite").value;
+    if(String(select) != '') {
+        favoriteValue = true;
+    }
+}
 function formVerify() {
     var submitButton = document.getElementById('submit');
-    if(ageValid && nameValid && mailValid) {
+    if(ageValid && nameValid && mailValid && favoriteValue && descriptionValue) {
         submitButton.style.backgroundColor ="#37af65";
         submitButton.style.color = "white";
         submitButton.disabled = false;

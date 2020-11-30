@@ -31,7 +31,7 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'description-title'>Which option best describes your current role?</span> 
-                    <select name ='desctiption' id = 'description' class = 'form-control cursor-click'>
+                    <select name ='description' id = 'description' onchange="descriptionVerify()" class = 'form-control cursor-click'>
                         <option value='' disabled selected>Select your current role</option>
                         <option value='student'>student</option>
                         <option value='Full Time Job'>Full Time Job</option>
@@ -49,7 +49,7 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'favorite-title'>What is your favorite feature of freeCodeCamp?</span> 
-                    <select name ='favorite' id = 'favorite' class = 'form-control cursor-click'>
+                    <select name ='favorite' id = 'favorite' onchange="featureVerify()" class = 'form-control cursor-click'>
                         <option value='' disabled selected>Select an option</option>
                         <option value='challenges'>Challenges</option>
                         <option value='projects'>Projects</option>
