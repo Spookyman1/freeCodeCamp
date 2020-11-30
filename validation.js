@@ -23,6 +23,9 @@ function ageVerify() {
             parentField.style.display = 'flex';
             parentLabel.innerHTML ='Participants younger than 18 must provide one parent name';
             parentLabel.style.color = 'white';
+        } else {
+            parentLabel.style.display = 'none';
+            parentField.style.display = 'none';
         }
     }
 }
