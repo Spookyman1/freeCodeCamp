@@ -4,13 +4,12 @@
     --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
 }
 html {
-    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
-    line-height: 1.5;
+    font-family:  Tahoma, Sans-Serif;
+    line-height: 3vh;
     font-size: 15px;
-    font-weight: 400;
+
 }
 body {
-    
     font-size:15px;
     position: relative;
     background:var(darkblue);
