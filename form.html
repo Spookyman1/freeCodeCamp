@@ -10,7 +10,7 @@
                 <h1>freeCodeCamp Survey Form</h1>
                 <h4>Thank you for taking the time to help us improve the platform</h4>
             </div>
-            <form id = 'survey' background-color='blue' onsubmit ="success()" onchange="formVerify()">
+            <form id = 'survey' class = "survey" background-color='blue' onsubmit ="success()" onchange="formVerify()">
                 <div class = 'group'>
                     <span id = 'name-title'>Name</span> 
                     <input class='form-control' type ='text' name='name' id='name' 
@@ -35,7 +35,7 @@
                 <div class = 'group'>
                     <span id = 'description-title'>Which option best describes your current role?</span> 
                     <select name ='description' id = 'description' onchange="descriptionVerify()" 
-                            class = 'form-control cursor-click'>
+                            class = 'form-control clickable'>
                         <option value='' disabled selected>Select your current role</option>
                         <option value='student'>student</option>
                         <option value='Full Time Job'>Full Time Job</option>
@@ -46,17 +46,17 @@
                 </div>
                 <div class = 'group'>
                     <span id = 'recommend-title'>Would you recommend freeCodeCamp to a friend?</span> 
-                    <label class = 'cursor-click'><input  type='radio' 
+                    <label class = 'clickable'><input  type='radio' 
                         class='radio-class' id='Definitely' name = 'rec' checked/>Definitely </label>
-                    <label class = 'cursor-click'><input  type='radio' class='radio-class' id='Maybe' 
+                    <label class = 'clickable'><input  type='radio' class='radio-class' id='Maybe' 
                             name = 'rec'/> Maybe </label>
-                    <label class = 'cursor-click'><input  type='radio' class='radio-class' id='Not Sure' 
+                    <label class = 'clickable'><input  type='radio' class='radio-class' id='Not Sure' 
                             name = 'rec'/> Not Sure </label>
                 </div>
                 <div class = 'group'>
                     <span id = 'favorite-title'>What is your favorite feature of freeCodeCamp?</span> 
                     <select name ='favorite' id = 'favorite' onchange="featureVerify()"
-                             class = 'form-control cursor-click'>
+                             class = 'form-control clickable'>
                         <option value='' disabled selected>Select an option</option>
                         <option value='challenges'>Challenges</option>
                         <option value='projects'>Projects</option>
@@ -66,13 +66,13 @@
                 </div>
                 <div class='group'>
                     <span id= 'improve-title'>What would you like to see improved? (Check all that apply)</span> 
-                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='front' name = 'front' value='front'> 
+                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='front' name = 'front' value='front'> 
                     Front-end Projects</label>
-                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='back' name = 'back' value='back'> 
+                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='back' name = 'back' value='back'> 
                     Back-end Projects</label>
-                    <label class = "cursor-click"><input type='checkbox' id ='data' name = 'data' value='data'> 
+                    <label class = "clickable"><input type='checkbox' id ='data' name = 'data' value='data'> 
                     Data Visualization</label>
-                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' 
+                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' 
                         id ='challenges' name = 'challenges' value='challenges'> 
                     challenges</label>
                     <label ><input  type='checkbox' class='checkbox-class' 
@@ -80,15 +80,15 @@
                     Open Source Community</label>
                     <label><input  type='checkbox' class='checkbox-class' id ='gitter' name = 'gitter' value='gitter'> 
                     Gitter help rooms</label>
-                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='Videos' name = 'Videos' value='Videos'> 
+                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='Videos' name = 'Videos' value='Videos'> 
                     Videos</label>
-                    <label class = "cursor-click"><input type='checkbox' id ='city-meetups' name = 'city-meetups' value='city-meetups'> 
+                    <label class = "clickable"><input type='checkbox' id ='city-meetups' name = 'city-meetups' value='city-meetups'> 
                     Front-end City Meetups</label>
-                    <label class = "cursor-click"><input  type='checkbox' class='checkbox-class' id ='wiki' name = 'wiki' value='wiki'> 
+                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='wiki' name = 'wiki' value='wiki'> 
                     Wiki</label>
-                    <label class = "cursor-click"><input type='checkbox' id ='forum' name = 'forum' value='forum'> 
+                    <label class = "clickable"><input type='checkbox' id ='forum' name = 'forum' value='forum'> 
                     Forum</label>
-                    <label class = "cursor-click"><input type='checkbox' id ='courses' name = 'courses' value='courses'> 
+                    <label class = "clickable"><input type='checkbox' id ='courses' name = 'courses' value='courses'> 
                     Additional Courses</label>
                 </div>
                 <div class = 'group'>
@@ -98,7 +98,7 @@
 
                 </div>
                 <div class='group'>
-                    <input type="submit" id='submit' name='submit' disabled value="Submit"></button>
+                    <input type="submit" class ='submit invalid-submit' id='submit' name='submit' disabled = true value="Submit"></button>
                 </div>
             </form>
         </body>
