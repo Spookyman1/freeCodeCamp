@@ -65,7 +65,7 @@ submit as class
   cursor: pointer;
 }
 /* as class */
-.comments {
+.area-control {
   resize: vertical;
   width: 100%;
 }
@@ -81,10 +81,12 @@ submit as class
 .valid-submit {
   color: white;
   background-color: #37af65;
+  cursor: pointer;
 }
 .invalid-submit {
   color: black;
   background-color: gray;
+  cursor: default;
 }
 .hidden {
   display: none;

@@ -1,105 +1,256 @@
-<html lang='en'>
-    <head>
-        <script src = 'validation.js'></script>
-        <script src= 'redirections.js'></script>
-    </head>
-    <title>Survey Form</title>
-        <link href='form.css' rel ='stylesheet' type = 'text/css'>
-        <body>
-            <div class='text-center'>
-                <h1>freeCodeCamp Survey Form</h1>
-                <h4>Thank you for taking the time to help us improve the platform</h4>
-            </div>
-            <form id = 'survey' class = "survey" background-color='blue' onsubmit ="success()" onchange="formVerify()">
-                <div class = 'group'>
-                    <span id = 'name-title'>Name</span> 
-                    <input class='form-control' type ='text' name='name' id='name' 
-                           placeholder='Enter your name' onchange="nameVerify()"> 
-                    <span class = 'hidden error-msg' type = 'text' name = 'name-error'
-                          id='name-error'>name must contain only letters and spaces</span>
-                </div>
-                <div class = 'group'>
-                    <span id = 'email-title'>Email</span> 
-                    <input class='form-control' type ='text' name='mail' id='mail' 
-                    placeholder='Enter your Email' onchange="mailVerify()">
-                    <span class = 'error-msg hidden' type = 'text' name = 'mail-error' id='mail-error'>not a valid mail address</span> 
-                </div>
-                <div class = 'group'>
-                    <span id = 'age-title'>Age(optional)</span> 
-                    <input class='form-control' type ='number' min='0' name='age' 
-                    id='age' placeholder='Age' onchange="ageVerify()">
-                    <span id = 'positive-age' class = 'error-msg hidden'>age must be positive</span>
-                    <span class = 'hidden' id='parents-title'>Participants younger than 18 must provide one parent name</span>
-                    <input class='form-control hidden' type='text' name='parents' id='parents' placeholder='Parents Full Name'>
-                </div>
-                <div class = 'group'>
-                    <span id = 'description-title'>Which option best describes your current role?</span> 
-                    <select name ='description' id = 'description' onchange="descriptionVerify()" 
-                            class = 'form-control clickable'>
-                        <option value='' disabled selected>Select your current role</option>
-                        <option value='student'>student</option>
-                        <option value='Full Time Job'>Full Time Job</option>
-                        <option value='Full Time Learner'>Full time Learner</option>
-                        <option value='prefer not to say'>prefer not to say</option>
-                        <option value='Other'>Other</option>
-                    </select> 
-                </div>
-                <div class = 'group'>
-                    <span id = 'recommend-title'>Would you recommend freeCodeCamp to a friend?</span> 
-                    <label class = 'clickable'><input  type='radio' 
-                        class='radio-class' id='Definitely' name = 'rec' checked/>Definitely </label>
-                    <label class = 'clickable'><input  type='radio' class='radio-class' id='Maybe' 
-                            name = 'rec'/> Maybe </label>
-                    <label class = 'clickable'><input  type='radio' class='radio-class' id='Not Sure' 
-                            name = 'rec'/> Not Sure </label>
-                </div>
-                <div class = 'group'>
-                    <span id = 'favorite-title'>What is your favorite feature of freeCodeCamp?</span> 
-                    <select name ='favorite' id = 'favorite' onchange="featureVerify()"
-                             class = 'form-control clickable'>
-                        <option value='' disabled selected>Select an option</option>
-                        <option value='challenges'>Challenges</option>
-                        <option value='projects'>Projects</option>
-                        <option value='community'>Community</option>
-                        <option value='open-source'>Open source</option>
-                    </select> 
-                </div>
-                <div class='group'>
-                    <span id= 'improve-title'>What would you like to see improved? (Check all that apply)</span> 
-                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='front' name = 'front' value='front'> 
-                    Front-end Projects</label>
-                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='back' name = 'back' value='back'> 
-                    Back-end Projects</label>
-                    <label class = "clickable"><input type='checkbox' id ='data' name = 'data' value='data'> 
-                    Data Visualization</label>
-                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' 
-                        id ='challenges' name = 'challenges' value='challenges'> 
-                    challenges</label>
-                    <label ><input  type='checkbox' class='checkbox-class' 
-                        id ='open-source' name = 'open-source' value='open-source'> 
-                    Open Source Community</label>
-                    <label><input  type='checkbox' class='checkbox-class' id ='gitter' name = 'gitter' value='gitter'> 
-                    Gitter help rooms</label>
-                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='Videos' name = 'Videos' value='Videos'> 
-                    Videos</label>
-                    <label class = "clickable"><input type='checkbox' id ='city-meetups' name = 'city-meetups' value='city-meetups'> 
-                    Front-end City Meetups</label>
-                    <label class = "clickable"><input  type='checkbox' class='checkbox-class' id ='wiki' name = 'wiki' value='wiki'> 
-                    Wiki</label>
-                    <label class = "clickable"><input type='checkbox' id ='forum' name = 'forum' value='forum'> 
-                    Forum</label>
-                    <label class = "clickable"><input type='checkbox' id ='courses' name = 'courses' value='courses'> 
-                    Additional Courses</label>
-                </div>
-                <div class = 'group'>
-                    <span> comments or suggestions?</span>
-                    <textarea class='area-control' rows='6' cols='62' id='comments' 
-                    name='comments' placeholder='Enter your comment here...'></textarea>
-
-                </div>
-                <div class='group'>
-                    <input type="submit" class ='submit invalid-submit' id='submit' name='submit' disabled = true value="Submit"></button>
-                </div>
-            </form>
-        </body>
+<html lang="en">
+  <head>
+    <script src="redirections.js"></script>
+    <script src="validation.js"></script>
+  </head>
+  <title>Survey Form</title>
+  <link href="form.css" rel="stylesheet" type="text/css" />
+  <body>
+    <div class="text-center">
+      <h1>freeCodeCamp Survey Form</h1>
+      <h4>Thank you for taking the time to help us improve the platform</h4>
+    </div>
+    <form
+      id="survey"
+      class="survey"
+      background-color="blue"
+      onchange="formVerify()"
+      onsubmit="success()"
+    >
+      <div class="group">
+        <span id="name-title">Name</span>
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          onchange="nameVerify()"
+        />
+        <span
+          class="hidden error-msg"
+          type="text"
+          name="name-error"
+          id="name-error"
+          >name must contain only letters and spaces</span
+        >
+      </div>
+      <div class="group">
+        <span id="email-title">Email</span>
+        <input
+          class="form-control"
+          type="text"
+          name="mail"
+          id="mail"
+          placeholder="Enter your Email"
+          onchange="mailVerify()"
+        />
+        <span
+          class="error-msg hidden"
+          type="text"
+          name="mail-error"
+          id="mail-error"
+          >not a valid mail address</span
+        >
+      </div>
+      <div class="group">
+        <span id="age-title">Age(optional)</span>
+        <input
+          class="form-control"
+          type="number"
+          min="0"
+          name="age"
+          id="age"
+          placeholder="Age"
+          onchange="ageVerify()"
+        />
+        <span id="positive-age" class="error-msg hidden"
+          >age must be positive</span
+        >
+        <span class="hidden" id="parents-title"
+          >Participants younger than 18 must provide one parent name</span
+        >
+        <input
+          class="form-control hidden"
+          type="text"
+          name="parents"
+          id="parents"
+          placeholder="Parents Full Name"
+        />
+      </div>
+      <div class="group">
+        <span id="description-title"
+          >Which option best describes your current role?</span
+        >
+        <select
+          name="description"
+          id="description"
+          onchange="descriptionVerify()"
+          class="form-control clickable"
+        >
+          <option value="" disabled selected>Select your current role</option>
+          <option value="student">student</option>
+          <option value="Full Time Job">Full Time Job</option>
+          <option value="Full Time Learner">Full time Learner</option>
+          <option value="prefer not to say">prefer not to say</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="group">
+        <span id="recommend-title"
+          >Would you recommend freeCodeCamp to a friend?</span
+        >
+        <label class="clickable"
+          ><input
+            type="radio"
+            class="radio-class"
+            id="Definitely"
+            name="rec"
+            checked
+          />Definitely
+        </label>
+        <label class="clickable"
+          ><input type="radio" class="radio-class" id="Maybe" name="rec" />
+          Maybe
+        </label>
+        <label class="clickable"
+          ><input type="radio" class="radio-class" id="Not Sure" name="rec" />
+          Not Sure
+        </label>
+      </div>
+      <div class="group">
+        <span id="favorite-title"
+          >What is your favorite feature of freeCodeCamp?</span
+        >
+        <select
+          name="favorite"
+          id="favorite"
+          onchange="featureVerify()"
+          class="form-control clickable"
+        >
+          <option value="" disabled selected>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open-source">Open source</option>
+        </select>
+      </div>
+      <div class="group">
+        <span id="improve-title"
+          >What would you like to see improved? (Check all that apply)</span
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="front"
+            name="front"
+            value="front"
+          />
+          Front-end Projects</label
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="back"
+            name="back"
+            value="back"
+          />
+          Back-end Projects</label
+        >
+        <label class="clickable"
+          ><input type="checkbox" id="data" name="data" value="data" /> Data
+          Visualization</label
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="challenges"
+            name="challenges"
+            value="challenges"
+          />
+          challenges</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="open-source"
+            name="open-source"
+            value="open-source"
+          />
+          Open Source Community</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="gitter"
+            name="gitter"
+            value="gitter"
+          />
+          Gitter help rooms</label
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="Videos"
+            name="Videos"
+            value="Videos"
+          />
+          Videos</label
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            id="city-meetups"
+            name="city-meetups"
+            value="city-meetups"
+          />
+          Front-end City Meetups</label
+        >
+        <label class="clickable"
+          ><input
+            type="checkbox"
+            class="checkbox-class"
+            id="wiki"
+            name="wiki"
+            value="wiki"
+          />
+          Wiki</label
+        >
+        <label class="clickable"
+          ><input type="checkbox" id="forum" name="forum" value="forum" />
+          Forum</label
+        >
+        <label class="clickable"
+          ><input type="checkbox" id="courses" name="courses" value="courses" />
+          Additional Courses</label
+        >
+      </div>
+      <div class="group">
+        <label> comments or suggestions?</label>
+        <textarea
+          class="area-control"
+          rows="6"
+          cols="62"
+          id="comments"
+          name="comments"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+      <div class="group">
+        <input
+          type="submit"
+          class="submit invalid-submit"
+          id="submit"
+          name="submit"
+          value="Submit"
+        />
+      </div>
+    </form>
+  </body>
 </html>

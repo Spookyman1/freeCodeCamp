@@ -32,7 +32,8 @@ const ageVerify = () => {
   var parentLabel = document.getElementById("parents-title");
   var parentField = document.getElementById("parents");
   var positiveError = document.getElementById("positive-age");
-  if (isNaN(age)) {
+  console.log(age);
+  if (age == "") {
     ageValid = false;
     hideError(parentLabel);
     hideError(parentField);
@@ -104,16 +105,15 @@ const formVerify = () => {
   var submitButton = document.getElementById("submit");
   if (ageValid && nameValid && mailValid && favoriteValue && descriptionValue) {
     addClass(submitButton, "valid-submit");
-
+    submitButton.disabled = false;
     if (submitButton.classList.contains("invalid-submit")) {
       submitButton.classList.remove("invalid-submit");
     }
-    submitButton.disabled = false;
   } else {
+    submitButton.disabled = true;
     if (submitButton.classList.contains("valid-submit")) {
       submitButton.classList.remove("valid-submit");
     }
     addClass(submitButton, "invalid-submit");
-    submitButton.disabled = true;
   }
 };
