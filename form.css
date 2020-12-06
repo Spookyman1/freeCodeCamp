@@ -70,12 +70,8 @@ submit as class
   width: 100%;
 }
 
-.parents-field {
-  display: none;
-}
 .error-msg {
   color: red;
-  display: none;
 }
 /* rename to clickable */
 .clickable {
@@ -89,4 +85,10 @@ submit as class
 .invalid-submit {
   color: black;
   background-color: gray;
+}
+.hidden {
+  display: none;
+}
+.display {
+  display: flex;
 }

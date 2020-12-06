@@ -20,10 +20,12 @@ const addClass = (element, className) => {
   }
 };
 const hideError = (elem) => {
-  elem.style.display = VALID_DISPLAY;
+  addClass(elem, "hidden");
+  elem.classList.remove("display");
 };
 const showError = (elem) => {
-  elem.style.display = INVALID_DISPLAY;
+  addClass(elem, "display");
+  elem.classList.remove("hidden");
 };
 const ageVerify = () => {
   var age = Number(document.getElementById("age").value);

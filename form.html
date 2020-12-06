@@ -15,22 +15,22 @@
                     <span id = 'name-title'>Name</span> 
                     <input class='form-control' type ='text' name='name' id='name' 
                            placeholder='Enter your name' onchange="nameVerify()"> 
-                    <span class = 'error-msg' type = 'text' name = 'name-error'
+                    <span class = 'hidden error-msg' type = 'text' name = 'name-error'
                           id='name-error'>name must contain only letters and spaces</span>
                 </div>
                 <div class = 'group'>
                     <span id = 'email-title'>Email</span> 
                     <input class='form-control' type ='text' name='mail' id='mail' 
                     placeholder='Enter your Email' onchange="mailVerify()">
-                    <span class = 'error-msg' type = 'text' name = 'mail-error' id='mail-error'>not a valid mail address</span> 
+                    <span class = 'error-msg hidden' type = 'text' name = 'mail-error' id='mail-error'>not a valid mail address</span> 
                 </div>
                 <div class = 'group'>
                     <span id = 'age-title'>Age(optional)</span> 
                     <input class='form-control' type ='number' min='0' name='age' 
                     id='age' placeholder='Age' onchange="ageVerify()">
-                    <span id = 'positive-age' class = 'error-msg'>age must be positive</span>
-                    <span class = 'parents-field' id='parents-title'>Participants younger than 18 must provide one parent name</span>
-                    <input class='form-control parents-field' type='text' name='parents' id='parents' placeholder='Parents Full Name'>
+                    <span id = 'positive-age' class = 'error-msg hidden'>age must be positive</span>
+                    <span class = 'hidden' id='parents-title'>Participants younger than 18 must provide one parent name</span>
+                    <input class='form-control hidden' type='text' name='parents' id='parents' placeholder='Parents Full Name'>
                 </div>
                 <div class = 'group'>
                     <span id = 'description-title'>Which option best describes your current role?</span> 
